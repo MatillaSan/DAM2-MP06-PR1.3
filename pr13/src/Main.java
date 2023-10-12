@@ -13,8 +13,8 @@ public class Main {
       String menu = "Escull una opció:";
       menu = menu + "\n 0) PR130mainPersonesHashmap";
       menu = menu + "\n 1) PR131hashmap";
-      menu = menu + "\n 2) PR121Files";
-      menu = menu + "\n 3) PR121Files";
+      menu = menu + "\n 2) PR132persona";
+      menu = menu + "\n 3) PR133mainTreballadors";
       // Adapta aquí les altres classes de l’exercici (PR122cat…)
       menu = menu + "\n 100) Sortir";
       System.out.println(menu);
@@ -25,8 +25,8 @@ public class Main {
         switch (opcio) {
           case 0: PR130mainPersonesHashmap.main(args); break;
           case 1: PR131hashmap.main(args); break;
-          case 2: break;
-          case 3: break;
+          case 2: PR132main.main(args); break;
+          case 3: PR133mainTreballadors.main(args); break;
           case 100: running = false; break;
           default: break;
         }
@@ -41,6 +41,14 @@ public class Main {
   static public String llegirLinia (String text) {
     System.out.print(text);
     return in.nextLine();
+  }
+
+  public static String padRight(String s, int n) {
+    return String.format("%-" + n + "s", s);  
+  }
+
+  public static String padLeft(String s, int n) {
+    return String.format("%" + n + "s", s);  
   }
 }
 
